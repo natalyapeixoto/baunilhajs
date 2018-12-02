@@ -1,6 +1,3 @@
-
-
-
 // FIREBASE login cadastro
 const database = firebase.database()
   const email =  document.getElementById('cadastro-btn')
@@ -10,22 +7,23 @@ const database = firebase.database()
   function signUpClick(e){
     e.preventDefault()
     console.log(e)
+    const nome = document.getElementById('nome')
     const email = document.getElementById('cadastro-email')
     const password = document.getElementById('cadastro-password')
-    const emailArg =  email.value
+    const nomeArg = nome.value
+    const emailArg = email.value
     const passArg = password.value
-    registerNewUser(emailArg, passArg)
+    registerNewUser(nomeArg, emailArg, passArg)
   }
 
   
-  function registerNewUser( email, password) {
+  function registerNewUser(nome, email, password) {
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(function(response) {
-        console.log(response)
         const userId = response.user.uid;
         database.ref("users/" + userId).set({
+          nome: nome,
           email: email,
-          password: password
         });
         redirectToHome(userId);
       })
@@ -45,8 +43,9 @@ const database = firebase.database()
 
   function singInUser(email, password){
     firebase.auth().signInWithEmailAndPassword(email, password)
-    .then((res)=> {
-      redirectToHome(res)
+    .then((response)=> {
+      const userId = response.user.uid;
+      redirectToHome(userId)
     })
     .catch((error)=>{
       handleError(error)
@@ -71,4 +70,4 @@ const database = firebase.database()
     window.location = '../home/home.html'
   }
 
- 
+

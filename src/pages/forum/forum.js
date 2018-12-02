@@ -12,7 +12,6 @@ function  showDiv (e){
 }
 
 
-
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     const userEmail =  user.email
@@ -22,12 +21,15 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-function enviarMessage (user){
+function sendMessage (msg){
     const ul = document.querySelector('.forum-messages')
     const li = document.createElement('li')
-    ul.appendChild()
+    li.textContent = msg;
+    ul.appendChild(li)
 }
 
 function writeMessage (input){
-  
+  const textarea = document.querySelector('textarea')
+  const msg = textarea.value
+  sendMessage(msg)
 }
