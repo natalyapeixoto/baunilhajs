@@ -28,15 +28,6 @@ inputEmail.addEventListener('change', function(e){
     loginDisplayMailError.textContent = 'digite um e-mail válido'
   }
 })
-const inputPassword = document.getElementById('login-password')
-inputPassword.addEventListener('change', function(e){
-   const loginDisplayPasswordError = document.querySelector('.login-password-error')
-  if(inputPassword.value >= 6){
-    loginDisplayPasswordError.textContent  =  ''
-  } else {
-    loginDisplayPasswordError.textContent  = 'senha inválida'
-  } 
-})
 
 
  const inputEmailCadastro = document.getElementById('cadastro-email') 
@@ -52,7 +43,7 @@ inputEmailCadastro.addEventListener('change', function(e){
 const inputPasswordCadastro = document.getElementById('cadastro-password')
 inputPasswordCadastro.addEventListener('change', function(e){
    const cadastroDisplayPasswordError = document.querySelector('.cadastro-password-error')
-  if(inputEmailCadastro.value.match(regex)){
+  if(inputPasswordCadastro.value <= 6){
     cadastroDisplayPasswordError.textContent =''
   } else{
     cadastroDisplayPasswordError.textContent ='sua senha deve ter mais de 6 dígitos'

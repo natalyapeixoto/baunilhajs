@@ -11,7 +11,7 @@ function  showDiv (e){
     }  
 }
 
-const database = firebase.database()
+
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
