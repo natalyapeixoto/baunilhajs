@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+</head>
+<body>
+     <div id="login" class="form-container">
+        <form class="form" action='/home'>
+          <label  for="email">Email</label>
+          <input id="login-email" type="email" name="email" placeholder="seu email" required>
+          <p class='login-email-error'></p>
+          <label for="password">Senha</label>
+          <input id="login-password" type="password" name='password' requited minlength="6" maxlength="9">
+          <p class='login-password-error'></p>
+          <button id="login-btn" class='form-btn' type="button">Entrar</button>
+          <a href="#cadastro" class="link-cadastro">Não tem conta? <br>Faça seu cadastro aqui.</a>
+        </form>
+      </div>
+
+      <div id="cadastro" class="cadastro-form-container">
+        <form class="form">
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" name="nome" placeholder="seu nome">
+          <label for="email">Email</label>
+          <input id="cadastro-email" type="email" name="email" placeholder="seu email">
+          <p class='cadastro-email-error'></p>
+          <label for="password" >Senha</label>
+          <input id="cadastro-password" type="password" name='password' >
+          <p class='cadastro-password-error'></p>
+          <label for="password" >Confirmação de Senha</label>
+          <input id="cadastro-conf-password" type="password" name='password'>
+          <p class='cadastro-password-conf-error'></p>
+          <button id="cadastro-btn" class='form-btn' type="submit">Entrar</button>
+          <a href="#login" class="link-login">Já tem conta?<br> Faça o seu login.</a>
+        </form> 
+      </div>
+    
+    
+      <script src='./firebase-config.js'></script>
+      <script src='./index.js'></script>
+      <script src='./validation.js'></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS Baunilha</title>
+  <link rel="stylesheet" href="home.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="header ">
+    <nav class="navbar ">
+      <div class="navbar-logo ">
+        <a href='#'><img src="../../../img/logo-2.png" alt="logo do baunilha.ja com o nome escrito e uma flor de vanilla"></a>
+      </div>
+
+      <div class="container" id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul class="burguer-menu-list">
+          <a href='#'>
+            <li class="list-item">Fórum</li>
+          </a>
+          <a href='#'>
+            <li class="list-item">Bibliotecas</li>
+          </a>
+        </ul>
+      </div>
+
+      <ul class="menu-list">
+        <a href='../forum/forum.html'>
+          <li class="list-item">Fórum</li>
+        </a>
+        <div class="dropdown">
+          <button class="dropbtn">Bibliotecas</button>
+          <div class="dropdown-content">
+            <a href="#">Vue</a>
+            <a href="#">Angular</a>
+            <a href="#">Ember</a>
+            <a href="#">Backbone</a>
+            <a href="#">Aurelia</a>
+            <a href="#">Meteor</a>
+            <a href="#">Polymer</a>
+            <a href="#">Socket</a>
+            <a href="#">Chaplin</a>
+            <a href="#">Enyo</a>
+            <a href="#" id='react'>React <img src='./vids/react.png'></a>
+          </div>
+        </div>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main id='codigos' class='main-codigos'>
+    <h1>Códigos mais acessados:</h1>
+    <div class='main-codigos-gifs'>
+      <a href='#clock'>
+        <div class="gif-box"><img src='vids/clock.gif'></div>
+      </a>
+      <a href='#drum'>
+        <div class="gif-box"><img src='vids/drum.gif'></div>
+      </a>
+      <a href='#buble'>
+        <div class="gif-box"><img src='vids/bubble.gif'></div>
+      </a>
+      <a href='#miniTube'>
+        <div class="gif-box"><img src='vids/miniTube.gif'></div>
+      </a>
+      <a href='#panel'>
+        <div class="gif-box"><img src='vids/panel.gif'></div>
+      </a>
+      <a href='#musicSearch'>
+        <div class="gif-box"><img src='vids/musicSearch.gif'></div>
+      </a>
+    </div>
+  </main>
+
+
+  <section id='drum'>
+      <h2>Bateria</h2>
+      <hr>
+      <p class='briefing'><i>
+          Kit de bateria feito usando apenas CSS, HTML e JavaScript. Utilizando o atributo HTML <a href='#' class='link'><code>'data-'.</code></a>E através de <a href='#' class='link'><code>EventListerners</code></a>
+         ouvimos pelo evento de <a href='#' class='link'><code>'keydown'</code></a>(pressionar tecla) e atribuímos um som de acordo com o código do teclado.</i>
+      </p>
+  
+      <div class='code-detail'>
+        <ul>
+          <li>Desenhando os botões</li>
+          <p>Os botões são feitos com 'li' dentro de uma <a href='#' class='link'><code>'ul'</code></a>.</p>
+          <div class='img-flexbox'>
+            <img src='./vids/drumDraw.PNG'>
+            <img src='./vids/drumDraw2.PNG'>
+          </div>
+        
+  
+          <li>Data Key + KeyCode </li>
+          <p>Neste pequeno projeto usamos a propriedade keyCode já que cada tecla no teclado gera um código, como podemos ver no site <a href='https://keycode.info/' target="_blank" class='link'>https://keycode.info/</a>.</p>
+          <p>Embora ainda comum, não é mais recomendado utilizar o keyCode, devido a imcompatibilidade de browsers.<br>
+            Deve-se evitar usá-lo sempre que possível. Ao invés, deve-se utilizar o <a href='https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code' target='_blank'class='link'><code>'KeyboardEvent.code'</code></a>, caso esteja implementado. Infelizmente alguns browsers ainda não tem, então, tenha cuidado. 
+           <br> fonte: MDN</p>
+          <img src='./vids/drumJS.PNG'>
+        </ul>
+  
+  
+        <h4>Veja o resultado abaixo clicando na imagem abaixo</h4>
+        <div class="img-flexbox"> <a href='https://natalyapeixoto.github.io/drumKit2/'><div class="gif-box"><img src='vids/drum.gif'></a></div>
+      </div>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    </section>
+
+  <section id='clock'>
+    <h2>Relógio</h2>
+    <hr>
+    <p class='briefing'><i>
+        Relógio feito usando apenas CSS, HTML e JavaScript.
+        Criando um novo objeto <a href='' class='link'><code>Date()</code></a> para tratar a hora. Desenvolvi a lógica
+        e fiz os movimentos com o efeito <a href='' class='link'><code>rotate()</code></a> de CSS.</i>
+    </p>
+
+    <div class='code-detail'>
+      <ul>
+        <li>Desenhando o Relógio</li>
+        <p>A borda do relógio será feita com a div 'clock'. Dentro dela, a div 'clock-body' será onde trataremos os
+          ponteiros do relógio, que serão divs vazias.</p>
+        <img src='./vids/clock-draw.PNG'>
+        <p>Na div clock, um border-radius de 50% com border de 10px 'solid' branca é suficiente para transforma-la em uma
+          circunferência, para visualizar é preciso que já tenhamos um background-color no nosso body(que seja
+          diferente de branco).</p>
+
+        <li>new Date()</li>
+        <p>Criando uma variável 'now' atribuimos a ela o objeto Data(), com isso conseguimos acessar a hora, minuto e
+          segundos atuais.</p>
+        <p><i>Note que objetos JavaScript Date só podem ser instanciados chamando JavaScript Date como um construtor:
+            chamá-lo como uma função regular (ou seja, sem o operador new) irá retornar uma string ao invés de um
+            objeto Date; ao contrário de outros tipos de objetos JavaScript, objetos JavaScript Date não têm sintaxe
+            literal.</i><br> fonte: MDN</p>
+        <img src='./vids/clockCss.PNG'>
+      </ul>
+
+
+      <h4>Veja o resultado abaixo clicando em 'run pen'</h4>
+      <div class='embed-pen'>
+        <p data-height="300" data-theme-id="dark" data-slug-hash="pZJKGX" data-default-tab="js,result" data-user="natalyapeixoto"
+          data-pen-title="CSS&JS Clock" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/natalyapeixoto/pen/pZJKGX/">CSS&JS
+            Clock</a> by natalya (<a href="https://codepen.io/natalyapeixoto">@natalyapeixoto</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+      </div>
+    </div>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  </section>
+
+
+
+
+
+
+  <script src='./home.js'></script>
+</body>
+
+</html>
