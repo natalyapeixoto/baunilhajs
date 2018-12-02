@@ -67,7 +67,7 @@ const database = firebase.database()
   }
 
   function redirectToHome(user){
-    localStorage.setItem("user", user)
+    localStorage.setItem("user", userId)
     window.location = '../home/home.html'
   }
 
