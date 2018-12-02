@@ -15,6 +15,58 @@
 </head>
 
 <body>
+    <header class="header ">
+        <nav class="navbar ">
+          <div class="navbar-logo ">
+            <a href='../home/home.html'><img src="../../../img/logo-2.png" alt="logo do baunilha.ja com o nome escrito e uma flor de vanilla"></a>
+          </div>
+    
+          <div class="container" id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="burguer-menu-list">
+              <a href='#'>
+                <li class="list-item">Fórum</li>
+              </a>
+              <a href='#'>
+                <li class="list-item">Bibliotecas</li>
+              </a>
+            </ul>
+          </div>
+    
+          <ul class="menu-list">
+            <a href='../forum/forum.html'>
+              <li class="list-item">Fórum</li>
+            </a>
+            <div class="dropdown">
+              <button class="dropbtn">Bibliotecas</button>
+              <div class="dropdown-content">
+                <a href="#">Vue</a>
+                <a href="#">Angular</a>
+                <a href="#">Ember</a>
+                <a href="#">Backbone</a>
+                <a href="#">Aurelia</a>
+                <a href="#">Meteor</a>
+                <a href="#">Polymer</a>
+                <a href="#">Socket</a>
+                <a href="#">Chaplin</a>
+                <a href="#">Enyo</a>
+                <a href="#" id='react'>React <img src='../home/vids/react.png'></a>
+              </div>
+            </div>
+            <!-- INÍCIO USERNAME E LOGOUT -->
+            
+            <li class='menu-bemvinda'>Olá, <span class="show-name"></span>!</li>
+    
+            <li><button class="logout-btn">Sair</button></li>
+          
+            <!-- FIM USERNAME E LOGOUT -->
+          </ul>
+        </nav>
+    
+      </header>
 
   <div class='forum-header'>
 
@@ -47,8 +99,10 @@
     <ul class='forum-messages'>
       
     </ul>
+    <div>
     <textarea rows="5" cols="33"></textarea>
     <button class='btn-send-message'>enviar</button>
+  </div>
   </div>
 
 

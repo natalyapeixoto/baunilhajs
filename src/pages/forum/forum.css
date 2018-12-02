@@ -1,15 +1,214 @@
 body{
-  padding:0;
   margin:0;
   box-sizing: border-box;
   font-family:'Open Sans', sans-serif;
 }
 
-ul, li, ol {
-  padding: .5em;
-  margin: 0;
+a, li, ul, ol {
+  color: black;
+  text-decoration: none;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
+a:hover {
+  color:inherit;
+  text-decoration: none;
+}
+
+/*navbar*/
+.navbar{
+  display:flex;
+  justify-content: space-around;
+  background: rgb(245, 245, 120);
+  align-items: center;
+  padding: .2em 1em;
+  box-shadow: 0px 0px 15px rgba(58, 57, 57, 0.678);
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+ 
+}
+.navbar-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.navbar-logo img{
+  height: 80px;
+  width: 180px;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+}
+.navbar-logo a :hover {
+  -webkit-transform: scale(1.1);
+}
+
+.menu-list{
+  width: 35em;
+  display: flex;
+  justify-content: space-around;
+}
+.show-name {
+  font-weight: bold;
+}
+.logout-btn{
+  border:none;
+  background:none;
+  cursor:pointer;
+}
+#react {
+  display: flex;
+  justify-content: space-between;
+  
+
+}
+#react:hover{
+  background-color: rgb(63, 63, 141);
+  color: white;
+  font-weight: bold;
+
+}
+#react img {
+  width: 40px;
+  height: 30px;
+  opacity:0;
+}
+#react img:hover{
+  opacity:1;
+}
+
+/*nav bar MENU BURGUER */
+.container {
+  display: none;
+  cursor: pointer;
+}
+  @media (max-width: 800px){
+  .navbar{
+    justify-content: start;
+  }
+  .container {
+    display: inline-block;
+  }
+  .menu-list{
+    display:none;
+  }
+  .navbar-logo {
+   position: absolute;
+   left: 40em;
+  }
+  #menuToggle{
+    display: block;
+    position: relative;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  #menuToggle input{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* esconde o input falso */
+    z-index: 2; 
+    -webkit-touch-callout: none;
+  }
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #0e0d0d;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  #menuToggle input:checked ~ span{
+    opacity: 1;
+    transform: rotate(45deg) translate(-1px, -2px);
+    background: #232323;
+  }
+  #menuToggle input:checked ~ span:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  #menuToggle input:checked ~ span:nth-last-child(2){
+    transform: rotate(-45deg) translate(1px, -1px);
+  }
+  .burguer-menu-list{
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background-color: rgba(243, 243, 125, 0.658);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  .list-item{
+    padding: 10px 0;
+    font-size: 22px;
+  }
+  ul a:hover{
+    background-color: rgb(212, 212, 4);
+    width: 100%;
+  }
+  #menuToggle input:checked ~ ul {
+  transform: none;
+  }
+}
+@media (max-width: 720px){
+  .navbar-logo {
+   display:none;
+  }
+}
+
+/* DROPDOWN MENU */
+.dropbtn {
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background: rgb(245, 245, 120);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover { 
+  background: rgb(248, 248, 209);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 
 @keyframes opacity{
   0%{
@@ -24,7 +223,7 @@ ul, li, ol {
 }
 
 .forum-header{
-  margin: 2em 10em;
+  padding: 9em 10em 0 10em;
 }
 .btn-codigo-de-conduta{
   display:block;
@@ -63,18 +262,28 @@ h2{
 
 .forum {
   display:flex;
-  justify-content: flex-end;
   flex-direction: column;
   margin: 2em 11em;
-  padding: 1em;
+  padding: 1em 2em;
   box-shadow: 0px 0px 10px rgb(22, 22, 21);
   border-radius: 1em;
 }
-
-.forum-messages {
-  
+.forum li span{
+  font-family: monospace;
 }
-
+.forum-message {
+  background-color: rgb(219, 212, 212);
+  margin: .5em 1em;
+  border-radius: .2em;
+  padding: 1em;
+}
+.user-name{
+  display:block;
+}
+textarea{
+  border-radius: .4em;
+  width: 30em;
+}
 .btn-send-message{
   display:block;
   border-radius: .2em;

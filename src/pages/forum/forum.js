@@ -1,4 +1,4 @@
-const button = document.querySelector('button')
+const button = document.querySelector('.btn-codigo-de-conduta')
 button.addEventListener('click', showDiv )
 
 function  showDiv (e){
@@ -11,25 +11,77 @@ function  showDiv (e){
     }  
 }
 
+const database = firebase.database()
+const USER_ID = localStorage.getItem("user") 
 
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    const userEmail =  user.email
-    console.log(userEmail)
-  } else {
-    console.log('ops')
-  }
-});
+const sendBtn= document.querySelector('.btn-send-message')
+sendBtn.addEventListener('click', getInputValue)
 
-function sendMessage (msg){
+function generateNewMessage (msg){
+  database.ref("users/" + USER_ID).once("value")
+  .then(function(snapshot) {
+   const user = snapshot.val().nome
     const ul = document.querySelector('.forum-messages')
     const li = document.createElement('li')
-    li.textContent = msg;
+    li.setAttribute('class', 'forum-message')
+    li.innerHTML = `<span class='user-name'>${user}</span>
+    ${msg}`
     ul.appendChild(li)
+    writeNewPost(user, msg)
+  })
 }
 
-function writeMessage (input){
+function getInputValue (){
   const textarea = document.querySelector('textarea')
-  const msg = textarea.value
-  sendMessage(msg)
+  let msg = textarea.value
+  if(msg.trim()){generateNewMessage(msg)}
+  clearInput()
+  textarea.focus()
+}
+
+function clearInput(){
+  const textarea = document.querySelector('textarea')
+  textarea.value = ''
+}
+
+function writeNewPost(username, body) {
+ const  postData = {
+    author: username,
+    body: body,
+  };
+  const newPostKey = firebase.database().ref().child('posts').push().key;
+  let updates = {};
+  updates['/posts/' + newPostKey] = postData;
+  updates['/user-posts/'  + newPostKey] = postData;
+  return firebase.database().ref().update(updates);
+}
+
+
+database.ref("user-posts/"  ).once("value")
+.then(function(snapshot) {
+  snapshot.forEach(function(item){
+    const ul = document.querySelector('.forum-messages')
+    ul.innerHTML += `<li class='forum-message'><span class='user-name'>${item.val().author}</span>${item.val().body}</>`
+    console.log(item.val())
+  })
+})
+
+ 
+
+// Mostrar nome do usuário logado na tela 
+database.ref("users/" + USER_ID).once("value")
+  .then(function(snapshot) {
+    snapshot.forEach(s => {
+      const userInfo = s.node_.value_
+      const showName = document.getElementsByClassName("show-name")[0]
+      showName.innerHTML = userInfo
+    })
+  })
+
+// Logout
+const logoutBtn = document.getElementsByClassName("logout-btn")[0]
+logoutBtn.addEventListener("click", redirectToIndex)
+
+function redirectToIndex() {
+  window.location = '../../../index.html'
 }

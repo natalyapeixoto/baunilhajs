@@ -21,12 +21,11 @@ a:hover {
   justify-content: space-around;
   background: rgb(245, 245, 120);
   align-items: center;
-  padding: .4em 1em;
+  padding: .2em 1em;
   box-shadow: 0px 0px 15px rgba(58, 57, 57, 0.678);
   position: fixed;
   z-index: 99;
   width: 100vw;
- 
 }
 .navbar-logo{
   display: flex;
@@ -35,8 +34,8 @@ a:hover {
   color: black;
 }
 .navbar-logo img{
-  height: 90px;
-  width: 200px;
+  height: 80px;
+  width: 180px;
   -webkit-transition: -webkit-transform 1s ease-in-out;
 }
 .navbar-logo a :hover {
@@ -44,27 +43,38 @@ a:hover {
 }
 
 .menu-list{
-  width: 20em;
+  width: 35em;
   display: flex;
   justify-content: space-around;
 }
-
+.show-name {
+  font-weight: bold;
+}
+.logout-btn{
+  border:none;
+  background:none;
+  cursor:pointer;
+}
 #react {
   display: flex;
   justify-content: space-between;
+  
 
 }
 #react:hover{
   background-color: rgb(63, 63, 141);
   color: white;
   font-weight: bold;
+
 }
 #react img {
   width: 40px;
   height: 30px;
-
+  opacity:0;
 }
-
+#react img:hover{
+  opacity:1;
+}
 
 /*nav bar MENU BURGUER */
 .container {
