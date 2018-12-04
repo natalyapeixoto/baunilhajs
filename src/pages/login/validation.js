@@ -43,7 +43,7 @@ inputEmailCadastro.addEventListener('change', function(e){
 const inputPasswordCadastro = document.getElementById('cadastro-password')
 inputPasswordCadastro.addEventListener('change', function(e){
    const cadastroDisplayPasswordError = document.querySelector('.cadastro-password-error')
-  if(inputPasswordCadastro.value >= 6){
+  if(inputPasswordCadastro.value.length >= 6){
     cadastroDisplayPasswordError.textContent =''
   } else{
     cadastroDisplayPasswordError.textContent ='sua senha deve ter mais de 6 dígitos'

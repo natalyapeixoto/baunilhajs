@@ -49,33 +49,28 @@ a:hover {
   display: flex;
   justify-content: space-around;
 }
+.list-item{
+  font-size: 18px;
+}
+.list-item:hover{
+  opacity: .5;
+}
+.menu-bemvinda{
+ font-size: 20px;
+}
 .show-name {
   font-weight: bold;
 }
 .logout-btn{
-  border:none;
+  border:.5px solid black;
+  padding: .5em 1em;
+  border-radius: 1em;
   background:none;
   cursor:pointer;
 }
-#react {
-  display: flex;
-  justify-content: space-between;
-  
-
-}
-#react:hover{
-  background-color: rgb(63, 63, 141);
+.logout-btn:hover{
+  background:black;
   color: white;
-  font-weight: bold;
-
-}
-#react img {
-  width: 40px;
-  height: 30px;
-  opacity:0;
-}
-#react img:hover{
-  opacity:1;
 }
 
 /*nav bar MENU BURGUER */
@@ -167,46 +162,10 @@ a:hover {
   transform: none;
   }
 }
-@media (max-width: 720px){
+@media (max-width: 950px){
   .navbar-logo {
    display:none;
   }
-}
-
-/* DROPDOWN MENU */
-.dropbtn {
-  background-color: transparent;
-  font-family: inherit;
-  font-size: 16px;
-  border: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  background: rgb(245, 245, 120);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover { 
-  background: rgb(248, 248, 209);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 
@@ -223,22 +182,32 @@ a:hover {
 }
 
 .forum-header{
-  padding: 9em 10em 0 10em;
+  padding: 8em 10em 0 10em;
+}
+@media(max-width: 950px){
+  .forum-header{
+    padding: 4em 2em 1em 2em;
+  }
 }
 .btn-codigo-de-conduta{
+  cursor: pointer;
   display:block;
   margin: 0 auto;
-  border-radius: 1em;
-  background-color: rgb(218, 218, 123);
-  box-shadow: 0px 0px 5px grey;
+  border-radius: 1.5em;
+  background:none;
   font-weight: bold;
-  border:none;
+  border: .5px solid rgb(20, 20, 20);
   outline: none;
-  padding: .5em;
+  padding: 1em 1.5em;
+}
+.btn-codigo-de-conduta:hover{
+  transform: scale(1.1);
+  transition: all  .5s;
 }
 .codigo-de-conduta{
   display:none;
   opacity: 0;
+  line-height: 2em;
 }
 .show-codigo-de-conduta{
   margin: 2em 14em;
@@ -265,14 +234,23 @@ h2{
   flex-direction: column;
   margin: 2em 11em;
   padding: 1em 2em;
-  box-shadow: 0px 0px 10px rgb(22, 22, 21);
-  border-radius: 1em;
+  box-shadow: 0px 0px 5px rgb(197, 197, 196);
+  border-radius: .4em;
+}
+
+@media(max-width:950px){
+  .forum {
+    
+    margin: .5em 2em;
+    padding: .5em 1em;
+    
+  }
 }
 .forum li span{
   font-family: monospace;
 }
 .forum-message {
-  background-color: rgb(219, 212, 212);
+  background-color: rgba(247, 247, 192, 0.781);
   margin: .5em 1em;
   border-radius: .2em;
   padding: 1em;
@@ -280,17 +258,48 @@ h2{
 .user-name{
   display:block;
 }
+.ask-container{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+@media (max-width: 950px){
+  .ask-container{
+    margin: .5em 2em;
+  }
+}
 textarea{
   border-radius: .4em;
   width: 30em;
 }
 .btn-send-message{
+  margin-left: 2em;
   display:block;
   border-radius: .2em;
-  background-color: rgb(218, 218, 123);
+  background-color: rgb(241, 203, 98);
   box-shadow: 0px 0px 5px grey;
   font-weight: bold;
   border:none;
   outline: none;
   width: 8em;
+  height: 3em;
+}
+
+footer {
+  padding: 3em 2em;
+  text-align: center;
+  margin-top: 3em;
+  background-color: rgba(82, 78, 78, 0.849);
+}
+footer i{
+  margin: 3px;
+  font-size: 28px;
+  color: black;
+}
+footer i:hover{
+  opacity: 0.5;
+}
+
+footer p {
+  font-family: monospace;
 }

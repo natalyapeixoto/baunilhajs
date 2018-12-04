@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="forum.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+  crossorigin="anonymous">
    <!-- Firebase -->
    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
@@ -27,12 +29,16 @@
             <span></span>
             <span></span>
             <ul class="burguer-menu-list">
-              <a href='#'>
-                <li class="list-item">Fórum</li>
-              </a>
-              <a href='#'>
-                <li class="list-item">Bibliotecas</li>
-              </a>
+              <a href='../home/home.html'>
+                  <li class="list-item">Principal</li>
+                </a>
+                <a href='../forum/forum.html'>
+                  <li class="list-item">Fórum</li>
+                </a>
+                <a href='../react/react.html'>
+                  <li class="list-item">React.js</li>
+                </a>              
+              <li><button class="list-item logout-btn">Sair</button></li>
             </ul>
           </div>
     
@@ -40,22 +46,9 @@
             <a href='../forum/forum.html'>
               <li class="list-item">Fórum</li>
             </a>
-            <div class="dropdown">
-              <button class="dropbtn">Bibliotecas</button>
-              <div class="dropdown-content">
-                <a href="#">Vue</a>
-                <a href="#">Angular</a>
-                <a href="#">Ember</a>
-                <a href="#">Backbone</a>
-                <a href="#">Aurelia</a>
-                <a href="#">Meteor</a>
-                <a href="#">Polymer</a>
-                <a href="#">Socket</a>
-                <a href="#">Chaplin</a>
-                <a href="#">Enyo</a>
-                <a href="#" id='react'>React <img src='../home/vids/react.png'></a>
-              </div>
-            </div>
+            <a href="../react/react.html" id='react'>
+              <li class="list-item">React.js</li>
+            </a>
             <!-- INÍCIO USERNAME E LOGOUT -->
             
             <li class='menu-bemvinda'>Olá, <span class="show-name"></span>!</li>
@@ -79,31 +72,45 @@
   <div class='codigo-de-conduta'>
     <p>Regras do rolê:</p>
     <ol>
-      <li><span>Não exite pergunta besta!</span>
+      <li><span>-Não exite pergunta besta!</span>
         Queremos que todas se sintam extremamente à vontade para perguntar sobre qualquer tópico relacionando a
         programação.
       </li>
-      <li>Não discriminamos.</li>
-      <li>Antes da desenvolvedoras, somos humanas.
+      <li>- Antes da desenvolvedoras, somos humanas.
         Pratique empatia!
       </li>
-      <li>Iremos adverter e eventualmente banir qualquer um que, for rude, resrespeitoso. Nossa comunicação é sempre
-        sadia</li>
-      <li>Críticas são bem-vindas</li>
-      <li></li>
+      <li>-Iremos adverter e eventualmente banir qualquer um que, for rude, resrespeitoso. Nossa comunicação é sempre
+        sadia e o objetico principal é se ajudar.</li>
+      <li>-Críticas construtivas são bem-vindas.</li>
+     
     </ol>
   </div>
 
-  <h2>Fórum do bem</h2>
+ 
   <div class='forum'>
+      <h2>Fórum do bem</h2>
     <ul class='forum-messages'>
       
     </ul>
-    <div>
-    <textarea rows="5" cols="33"></textarea>
-    <button class='btn-send-message'>enviar</button>
+   
   </div>
-  </div>
+  <div class='ask-container'>
+      <textarea rows="5" cols="33"></textarea>
+      <button class='btn-send-message'>enviar</button>
+    </div>
+
+    <footer class="footer " id="footer">
+        
+          <a href="https://www.linkedin.com/in/natalyapeixoto1989/" target="blank_"> <i class="fab fa-linkedin"></i></a>
+          <a href='https://github.com/natalyapeixoto' target="blank_"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com/natalynha"><i class="fab fa-twitter" target="blank_"></i></a>
+          
+          <div>
+              <p>Desenvolvido por Natalya Peixoto</p>
+          </div>
+      </footer>
+
+
 
 
   <script src='../login/firebase-config.js'></script>

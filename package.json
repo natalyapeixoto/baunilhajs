@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "dependencies": {
+    "@getgauge/cli": "^1.0.3",
     "firebase": "^5.5.9",
     "lodash": "^4.17.11"
   },
