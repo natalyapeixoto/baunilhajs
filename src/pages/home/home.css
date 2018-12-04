@@ -302,3 +302,13 @@ h1, h2, {
 .img-drum-link img{
   width: 30em;
 }
+
+@media (max-width: 950px){
+  
+  img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  }
+}

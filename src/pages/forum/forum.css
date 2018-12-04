@@ -306,3 +306,14 @@ footer i:hover{
 footer p {
   font-family: monospace;
 }
+
+
+@media (max-width: 950px){
+
+  img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  }
+}
