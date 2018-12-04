@@ -72,7 +72,10 @@ a:hover {
   background:black;
   color: white;
 }
-
+.logout-btn-burguer{
+  background:none;
+  border:none;
+}
 /*nav bar MENU BURGUER */
 .container {
   display: none;

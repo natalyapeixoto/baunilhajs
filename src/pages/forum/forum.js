@@ -85,3 +85,10 @@ logoutBtn.addEventListener("click", redirectToIndex)
 function redirectToIndex() {
   window.location = '../../../index.html'
 }
+
+const logoutBtnBurguer = document.getElementsByClassName("logout-btn-burguer")[0]
+logoutBtnBurguer.addEventListener("click", redirectToIndex)
+
+function redirectToIndex() {
+  window.location = '../../../index.html'
+}

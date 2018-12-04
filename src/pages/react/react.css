@@ -76,7 +76,10 @@ a:hover {
   background:black;
   color: white;
 }
-
+.logout-btn-burguer{
+  background:none;
+  border:none;
+}
 
 
 
