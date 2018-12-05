@@ -8,67 +8,57 @@
   <title>Document</title>
   <link rel="stylesheet" href="forum.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-  crossorigin="anonymous">
-   <!-- Firebase -->
-   <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
-   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+    crossorigin="anonymous">
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
 </head>
 
 <body>
-    <header class="header ">
-        <nav class="navbar ">
-          <div class="navbar-logo ">
-            <a href='../home/home.html'><img src="../../../img/logo-2.png" alt="logo do baunilha.ja com o nome escrito e uma flor de vanilla"></a>
-          </div>
-    
-          <div class="container" id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul class="burguer-menu-list">
-              <a href='../home/home.html'>
-                  <li class="list-item">Principal</li>
-                </a>
-                <a href='../forum/forum.html'>
-                  <li class="list-item">Fórum</li>
-                </a>
-                <a href='../react/react.html'>
-                  <li class="list-item">React.js</li>
-                </a>              
-              <li><button class="list-item logout-btn-burguer">Sair</button></li>
-            </ul>
-          </div>
-    
-          <ul class="menu-list">
-            <a href='../forum/forum.html'>
-              <li class="list-item">Fórum</li>
-            </a>
-            <a href="../react/react.html" id='react'>
-              <li class="list-item">React.js</li>
-            </a>
-            <!-- INÍCIO USERNAME E LOGOUT -->
-            
-            <li class='menu-bemvinda'>Olá, <span class="show-name"></span>!</li>
-    
-            <li><button class="logout-btn">Sair</button></li>
-          
-            <!-- FIM USERNAME E LOGOUT -->
-          </ul>
-        </nav>
-    
-      </header>
-
+  <header class="header ">
+    <nav class="navbar ">
+      <div class="navbar-logo ">
+        <a href='../home/home.html'><img src="../../../img/logo-2.png" alt="logo do baunilha.ja com o nome escrito e uma flor de vanilla"></a>
+      </div>
+      <div class="container" id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul class="burguer-menu-list">
+          <a href='../home/home.html'>
+            <li class="list-item">Principal</li>
+          </a>
+          <a href='../forum/forum.html'>
+            <li class="list-item">Fórum</li>
+          </a>
+          <a href='../react/react.html'>
+            <li class="list-item">React.js</li>
+          </a>
+          <li><button class="list-item logout-btn-burguer">Sair</button></li>
+        </ul>
+      </div>
+      <ul class="menu-list">
+        <a href='../forum/forum.html'>
+          <li class="list-item">Fórum</li>
+        </a>
+        <a href="../react/react.html" id='react'>
+          <li class="list-item">React.js</li>
+        </a>
+        <li class='menu-bemvinda'>Olá, <span class="show-name"></span>!</li>
+        <li><button class="logout-btn">Sair</button></li>
+      </ul>
+    </nav>
+  </header>
   <div class='forum-header'>
-
     <h4><i>Antes de tudo, leia nosso código de conduta.
-      Queremos criar um ambiente seguro e, por isso, lê-lo é muito importante para o bom funcionamento da nossa
-      comunidade.</i></h4>
-      <button class='btn-codigo-de-conduta'>Click aqui para ler</button>
+        Queremos criar um ambiente seguro e, por isso, lê-lo é muito importante para o bom funcionamento da nossa
+        comunidade.</i></h4>
+    <button class='btn-codigo-de-conduta'>Click aqui para ler</button>
   </div>
-  
+
   <div class='codigo-de-conduta'>
     <p>Regras do rolê:</p>
     <ol>
@@ -82,39 +72,28 @@
       <li>-Iremos adverter e eventualmente banir qualquer um que, for rude, resrespeitoso. Nossa comunicação é sempre
         sadia e o objetico principal é se ajudar.</li>
       <li>-Críticas construtivas são bem-vindas.</li>
-     
     </ol>
   </div>
 
- 
   <div class='forum'>
-      <h2>Fórum do bem</h2>
-    <ul class='forum-messages'>
-      
-    </ul>
-   
+    <h2>Fórum do bem</h2>
+    <ul class='forum-messages'></ul>
   </div>
   <div class='ask-container'>
-      <textarea rows="5" cols="33"></textarea>
-      <button class='btn-send-message'>enviar</button>
+    <textarea rows="5" cols="33"></textarea>
+    <button class='btn-send-message'>enviar</button>
+  </div>
+
+  <footer class="footer " id="footer">
+    <a href="https://www.linkedin.com/in/natalyapeixoto1989/" target="blank_"> <i class="fab fa-linkedin"></i></a>
+    <a href='https://github.com/natalyapeixoto' target="blank_"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com/natalynha"><i class="fab fa-twitter" target="blank_"></i></a>
+    <div>
+      <p>Desenvolvido por Natalya Peixoto</p>
     </div>
-
-    <footer class="footer " id="footer">
-        
-          <a href="https://www.linkedin.com/in/natalyapeixoto1989/" target="blank_"> <i class="fab fa-linkedin"></i></a>
-          <a href='https://github.com/natalyapeixoto' target="blank_"><i class="fab fa-github"></i></a>
-          <a href="https://twitter.com/natalynha"><i class="fab fa-twitter" target="blank_"></i></a>
-          
-          <div>
-              <p>Desenvolvido por Natalya Peixoto</p>
-          </div>
-      </footer>
-
-
-
+  </footer>
 
   <script src='../login/firebase-config.js'></script>
   <script src='./forum.js'></script>
 </body>
-
 </html>

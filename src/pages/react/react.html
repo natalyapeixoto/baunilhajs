@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
@@ -27,7 +29,7 @@
         <span></span>
         <span></span>
         <ul class="burguer-menu-list">
-        <a href='../home/home.html'>
+          <a href='../home/home.html'>
             <li class="list-item">Principal</li>
           </a>
           <a href='../forum/forum.html'>
@@ -36,66 +38,56 @@
           <a href='../react/react.html'>
             <li class="list-item">Bibliotecas</li>
           </a>
-          
-        <li><button class="list-item logout-btn-burguer">Sair</button></li>
+          <li><button class="list-item logout-btn-burguer">Sair</button></li>
         </ul>
       </div>
-
       <ul class="menu-list">
-          <a href='../forum/forum.html'>
-            <li class="list-item">Fórum</li>
-          </a>
-          <a href="../react/react.html" id='react'>
-            <li class="list-item">React.js</li>
-          </a>
-          <!-- INÍCIO USERNAME E LOGOUT -->
-          
-          <li class='menu-bemvinda'>Olá, <span class="show-name"></span>!</li>
-  
-          <li><button class="logout-btn">Sair</button></li>
-        
-          <!-- FIM USERNAME E LOGOUT -->
-        </ul>
+        <a href='../forum/forum.html'>
+          <li class="list-item">Fórum</li>
+        </a>
+        <a href="../react/react.html" id='react'>
+          <li class="list-item">React.js</li>
+        </a>
+        <li class='menu-bemvinda'>Olá, <span class="show-name"></span>!</li>
+        <li><button class="logout-btn">Sair</button></li>
+      </ul>
     </nav>
   </header>
-
   <div class='react-title'>
     <h3>React</h3>
     <h2>Uma biblioteca JavaScript para construir interfaces de usuário.</h2>
   </div>
-
-  
-
   <section id='calculator'>
     <h2 class='title-calculator'>Criar um novo projeto em React</h2>
     <p class='briefing'><i>
-      O <strong>'react-react-app'</strong> é um espaço comfortável para aprender React, e é o melhor jeito de começar a construir uma nova 'single-page-application'(aplicação de uma só página) em React. 
-      Ele cria o seu espaço de desenvolvimento para que possa usar as mais modernas 'features', provendo uma boa experiência de desenvolvimento, e otimiza sua aplicação para produção. 
-      Para instalar você precisar ter o Node.js >= 6 e npm >= 5.2. 
-      Para criar um projeto, dê os seguintes comandos:
-    </i>
+        O <strong>'react-react-app'</strong> é um espaço comfortável para aprender React, e é o melhor jeito de começar
+        a construir uma nova 'single-page-application'(aplicação de uma só página) em React.
+        Ele cria o seu espaço de desenvolvimento para que possa usar as mais modernas 'features', provendo uma boa
+        experiência de desenvolvimento, e otimiza sua aplicação para produção.
+        Para instalar você precisar ter o Node.js >= 6 e npm >= 5.2.
+        Para criar um projeto, dê os seguintes comandos:
+      </i>
     </p>
-          <code>
+    <code>
           npx create-react-app nome-do-seu-app <br>
           cd nome-do-seu-app<br>
           npm start<br>
        </code>
-       <p class='briefing'><i>Obs.: 'npx' escrito na primeira linha, não é um erro - é uma ferramenta que acelera processos dos pacotes, ela vem na versão 5.2 + do npm.
-        </i></p>
-  
-       
-   
+    <p class='briefing'><i>Obs.: 'npx' escrito na primeira linha, não é um erro - é uma ferramenta que acelera
+        processos dos pacotes, ela vem na versão 5.2 + do npm.
+      </i></p>
 
     <div class='code-detail'>
       <ul>
         <li>Componentização</li>
-        <p>A componentização é um processo muito importante na programação, criar pequenos blocos de código reutilizáveis. Diminuindo sua complexidade e permitindo que cada componente seja focado em apenas uma funcionalidade ou em um conjunto de funcionalidades semelhantes.</p>
+        <p>A componentização é um processo muito importante na programação, criar pequenos blocos de código
+          reutilizáveis. Diminuindo sua complexidade e permitindo que cada componente seja focado em apenas uma
+          funcionalidade ou em um conjunto de funcionalidades semelhantes.</p>
         <p>Dito isso, vamos a primeira parte do projeto <strong>Calculadora em React.</strong></p>
         <br>
         <p> Olhando para uma calculadora, podemos pensar de cara em seus 3 componentes:
           botões, corpo e tela(onde aparecem os cálculos).
         </p>
-
         <li>Componente Botão</li>
         <img src='./img/Button.PNG' alt='imagem do código de um componente chamando Button'>
         <p>Ele vai receber as props do componente App</p>
@@ -107,31 +99,46 @@
         <p>O Display vai receber o state.operations (que é uma Array) como props no componente App.</p>
         <li>O Componente App</li>
         <img src='./img/AppImport.PNG' alt='image dos imports existentes no componente App'>
-        <p>Este componente receberá os importes dos outros componentes citados e, além disso, ele receberá a <a href='http://mathjs.org/docs/reference/functions/format.html'>math.js'</a> para lidar com as operações matematicas e a <a href=''>'immutability-helper'</a> com a função update para ajudar a lidar com as atualizações de state.</p>
+        <p>Este componente receberá os importes dos outros componentes citados e, além disso, ele receberá a <a href='http://mathjs.org/docs/reference/functions/format.html'>math.js'</a>
+          para lidar com as operações matematicas e a <a href=''>'immutability-helper'</a> com a função update para
+          ajudar a lidar com as atualizações de state.</p>
         <br>
         <img src='./img/App1.PNG'>
-        <p>No construtor do App criamos o state operations, que será uma array vazia e será onde colocaremos todas as operações.</p>
-        <p>Em seguida temos a função 'calculateOperations', que como o nome diz, vai fazer todos os cáculos, nela usamos a bibliote mathjs com a função eval, que irá fazer as operações matemáticas e a função format pra formatar o numero.</p>
+        <p>No construtor do App criamos o state operations, que será uma array vazia e será onde colocaremos todas as
+          operações.</p>
+        <p>Em seguida temos a função 'calculateOperations', que como o nome diz, vai fazer todos os cáculos, nela
+          usamos a bibliote mathjs com a função eval, que irá fazer as operações matemáticas e a função format pra
+          formatar o numero.</p>
         <br>
         <img src='./img/App2.PNG'>
-        <p>Teremos aqui mais uma função, a handleClick, que vai lidar com os cliques do usuário. Na constante value recebemos o valor do 'data-value' do botão clicado, e dependendo deste valor realizaremos as funções que ficaram definidas num bloco de switch.</p>
+        <p>Teremos aqui mais uma função, a handleClick, que vai lidar com os cliques do usuário. Na constante value
+          recebemos o valor do 'data-value' do botão clicado, e dependendo deste valor realizaremos as funções que
+          ficaram definidas num bloco de switch.</p>
         <br>
         <img src='./img/App3.PNG'>
-        <p>Finalmente renderizamos o nosso App, jutando todos os Componentes que criamos anteriormente e declarando todas a props necessárias.</p>
+        <p>Finalmente renderizamos o nosso App, jutando todos os Componentes que criamos anteriormente e declarando
+          todas a props necessárias.</p>
         <br>
-        <p><i>Importante não esquecer de importar o App no index.js e coloca-lo na função 'ReactDOM.render' para possamos ver o projeto funcionando.</i></p>
+        <p><i>Importante não esquecer de importar o App no index.js e coloca-lo na função 'ReactDOM.render' para
+            possamos ver o projeto funcionando.</i></p>
         <br>
       </ul>
-
-
       <h4>Veja o resultado clicando na imagem abaixo</h4>
-      
-      </div>
-      <div class='react-gif'>
-        <a href='https://minha-calculadora-react.netlify.com/'><img src="./img/calculator.gif" alt="gif of a calulator made in react.js working"></a>
-      </div>
-      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    </div>
+    <div class='react-gif'>
+      <a href='https://minha-calculadora-react.netlify.com/'><img src="./img/calculator.gif" alt="gif of a calulator made in react.js working"></a>
+    </div>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
   </section>
+
+  <footer class="footer " id="footer">
+    <a href="https://www.linkedin.com/in/natalyapeixoto1989/" target="blank_"> <i class="fab fa-linkedin"></i></a>
+    <a href='https://github.com/natalyapeixoto' target="blank_"><i class="fab fa-github"></i></a>
+    <a href="https://twitter.com/natalynha"><i class="fab fa-twitter" target="blank_"></i></a>
+    <div>
+      <p>Desenvolvido por Natalya Peixoto</p>
+    </div>
+  </footer>
 
   <script src='../login/firebase-config.js'></script>
   <script src='./react.js'></script>

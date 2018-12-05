@@ -33,6 +33,8 @@ a:hover {
   width: 100vw;
   top:0;
 }
+
+
 .navbar-logo{
   display: flex;
   justify-content: center;
@@ -91,6 +93,7 @@ a:hover {
   @media (max-width: 800px){
   .navbar{
     justify-content: start;
+    padding: 1em;
   }
   .container {
     display: inline-block;
@@ -285,6 +288,26 @@ code {
   justify-content: center;
 }
 
+
+footer {
+  padding: 3em 2em;
+  text-align: center;
+  margin-top: 3em;
+  background-color: rgba(82, 78, 78, 0.849);
+}
+footer i{
+  margin: 3px;
+  font-size: 28px;
+  color: black;
+}
+footer i:hover{
+  opacity: 0.5;
+}
+
+footer p {
+  font-family: monospace;
+}
+
 @media (max-width: 950px){
   .react-gif{
     width: 100%;
@@ -299,3 +322,4 @@ code {
   display: block;
   }
 }
+
