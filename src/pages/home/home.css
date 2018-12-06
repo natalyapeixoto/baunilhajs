@@ -149,7 +149,7 @@ a:hover {
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
-    background-color: rgba(243, 243, 125, 0.658);
+    background-color: rgb(243, 243, 125);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
