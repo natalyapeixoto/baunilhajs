@@ -80,9 +80,7 @@ a:hover {
 }
 
 @media(max-width: 900px){
-  .main-logo img{
-    width: 15em;
-  }
+ 
   .flor {
     display:none;
   }
@@ -104,7 +102,7 @@ a:hover {
     }
   }
   .main-logo img{
-    width: 38em;
+    width: 15em;
     position: relative;
     animation: floating 5s 1 ease-in-out;
     transform:scale(1.2);

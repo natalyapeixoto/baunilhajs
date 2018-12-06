@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
@@ -22,6 +24,7 @@
           <input id="login-password" type="password" name='password' required minlength="6" maxlength="9">
           <p class='login-password-error'></p>
           <button id="login-btn" class='form-btn' type="button">Entrar</button>
+          <span id='loading-gif-login'></span>
           <a href="#cadastro" class="link-cadastro">Não tem conta? <br>Faça seu cadastro aqui.</a>
         </form>
       </div>
@@ -39,7 +42,8 @@
           <label for="password" >Confirmação de Senha</label>
           <input id="cadastro-conf-password" type="password" name='password'required minlength="6" maxlength="9">
           <p class='cadastro-password-conf-error'></p>
-          <button id="cadastro-btn" class='form-btn' type="submit">Entrar</button>
+          <button id="cadastro-btn" class='form-btn' type="submit">Cadastrar e entrar</button>
+          <span id='loading-gif-cadastro'></span>
           <a href="#login" class="link-login">Já tem conta?<br> Faça o seu login.</a>
         </form> 
       </div>

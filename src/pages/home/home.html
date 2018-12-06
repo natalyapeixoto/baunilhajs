@@ -8,8 +8,11 @@
   <title>JS Baunilha</title>
   <link rel="stylesheet" href="home.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
     crossorigin="anonymous">
+    <link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
@@ -107,7 +110,7 @@
           <br> fonte: MDN</p>
       </ul>
       <h4>Veja o resultado clicando na imagem abaixo</h4>
-      <div class="img-drum-link"> <a href='https://natalyapeixoto.github.io/drumKit2/'><img src='vids/drum.gif'></a>
+      <div class="img-drum-link"> <a href='https://natalyapeixoto.github.io/drumKit2/' target='_blank'><img src='vids/drum.gif'></a>
       </div>
       <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
   </section>
@@ -146,6 +149,35 @@
             Clock</a> by natalya (<a href="https://codepen.io/natalyapeixoto">@natalyapeixoto</a>) on <a href="https://codepen.io">CodePen</a>.</p>
       </div>
     </div>
+
+  </section>
+
+    <section id='miniTube'>
+      <h2>MiniTube</h2>
+      <hr>
+      <p class='briefing'><i>
+         Feito usando HTML, CSS, JavaScript e SASS. Consumindo a API do youtube para 
+        renderizar vídeos de acordo com input do usuário.</i></p>
+      <div class='code-detail'>
+        <ul>
+          <li>API do Youtube</li>
+          <p>Primeiramente deve-se ler a documentação disponível no site youtube para desenvolvedores, achar exatamente a url que queremos, 
+            entender os parametros e usá-los corretamente.Além disso precisamos também criar uma chave de API (API key) da Google.</p>
+          <img src='./vids/miniTube1.PNG'>
+          <p>Para facilitar, segue url da API com parametros necessários para retornar vídeos de acordo com input do usuário.</p>
+          <li>Fetch()</li>
+          <p>Existem várias bibliotecas para fazer 'pedidos'(requests) de API, como por exemplo a <a href='https://www.npmjs.com/package/axios'>axios</a>. Neste
+          caso, como estamos fazendo vanillajs, usarei a função <a href='https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using_Fetch'>fetch()</a>, nativa do JavaScript implementada no ECMAscript 6.</p>
+          <p><i>A API Fetch fornece uma interface JavaScript para accessar e manipular partes do pipeline HTTP, tais como os pedidos e respostas. Ele também fornece o método global fetch() que fornece uma maneira fácil e lógica para buscar recursos de forma assíncrona através da rede..</i><br> fonte: MDN</p>
+          <img src='./vids/miniTube2.PNG'>
+          <p>Aqui estamos recebendo os dados, tratando com uma <a href='https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>. Recebemos o objeto e transformamos ele em JSON para conseguirmos manipulá-lo.</p>
+          <p>Acessando o objetos, estamos iterando pelas propriedades e gerando HTML dinamicamente.</p>
+          <img src='./vids/miniTube3.PNG'>
+          <p>Ao final, temos um <a href='https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch'>catch()</a> para lidar com o erro.</p>
+        </ul>
+        <h4>Veja o repositório com mais detalhes clicando na imagem abaixo.</h4>
+        <a href='https://github.com/natalyapeixoto/MiniTube'><img class='minitubeImage' src='../home/vids/miniTube.gif'></a>
+      </div>
 
     <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
   </section>

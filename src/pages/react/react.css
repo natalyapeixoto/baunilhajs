@@ -204,13 +204,19 @@ h3{
 
 }
 
+h4{
+  margin-top: 3em;
+  font-size: 28px;
+}
+
 
 
 /*SECTIONS EXPLAINING CODE */
 .react-title{
-  margin-top: 7em;
+  margin-top: 8em;
   background-color: rgb(40, 44, 52);
   padding: 4em 5em;
+  
 }
 section{
   padding: 0em 7em;
@@ -243,7 +249,7 @@ h1 {
 .code-detail{
   background-color: rgb(238, 238, 238);
   display: block;
-  margin: 0 14em;
+  margin: 2em 14em 1em 14em;
   padding: 1em;
 }
 

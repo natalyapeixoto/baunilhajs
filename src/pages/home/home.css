@@ -315,6 +315,11 @@ h1, h2, {
 }
 
 
+.minitubeImage{
+  width: 40em;
+
+}
+
 footer {
   padding: 3em 2em;
   text-align: center;
