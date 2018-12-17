@@ -186,7 +186,7 @@ a:hover {
 }
 
 .forum-header{
-  padding: 8em 10em 0 10em;
+  padding: 8em 20em 0 20em;
 }
 @media(max-width: 950px){
   .forum-header{
@@ -203,9 +203,11 @@ a:hover {
   border: .5px solid rgb(20, 20, 20);
   outline: none;
   padding: 1em 1.5em;
+  color: rgb(14, 13, 13);
 }
 .btn-codigo-de-conduta:hover{
-  transform: scale(1.1);
+  background: black;
+  color:white;
   transition: all  .5s;
 }
 .codigo-de-conduta{
@@ -236,7 +238,7 @@ a:hover {
 
 h2{
   text-align:center;
-  font-family: monospace;
+  
 }
 
 .forum {
@@ -260,13 +262,15 @@ h2{
   font-family: monospace;
 }
 .forum-message {
-  background-color: rgba(247, 247, 192, 0.781);
+  background-color: rgba(248, 248, 103, 0.76);
   margin: .5em 1em;
   border-radius: .2em;
   padding: 1em;
 }
 .user-name{
   display:block;
+  margin-bottom: .5em;
+  font-weight: bolder;
 }
 .ask-container{
   display: flex;
@@ -286,7 +290,7 @@ textarea{
   margin-left: 2em;
   display:block;
   border-radius: .2em;
-  background-color: rgb(241, 203, 98);
+  background-color: rgb(241, 193, 60);
   box-shadow: 0px 0px 5px grey;
   font-weight: bold;
   border:none;
