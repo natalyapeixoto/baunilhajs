@@ -339,7 +339,7 @@ footer p {
   font-family: monospace;
 }
 
-@media (max-width: 950px){
+@media (max-width: 1300px){
   .img-flexbox{
     display:flex;
     flex-direction: column;

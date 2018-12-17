@@ -295,6 +295,7 @@ code {
 }
 
 
+
 footer {
   padding: 3em 2em;
   text-align: center;
@@ -314,7 +315,7 @@ footer p {
   font-family: monospace;
 }
 
-@media (max-width: 950px){
+@media (max-width: 1300px){
   .react-gif{
     width: 100%;
     max-width: 100%;
